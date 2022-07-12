@@ -1,0 +1,17 @@
+rtkit:111:RealtimeKit,,,:/bin/zsh
+dnsmasq:112:dnsmasq,,,:/bin/zsh
+cups-pk-helper:113:user for cups-pk-helper service,,,:/bin/zsh
+speech-dispatcher:114:Speech Dispatcher,,,:/bin/zsh
+kernoops:116:Kernel Oops Tracking Daemon,,,:/bin/zsh
+saned:117::/bin/zsh
+nm-openvpn:118:NetworkManager OpenVPN,,,:/bin/zsh
+hplip:119:HPLIP system user,,,:/bin/zsh
+whoopsie:120::/bin/zsh
+geoclue:122::/bin/zsh
+gnome-initial-setup:124::/bin/zsh
+gdm:125:Gnome Display Manager:/bin/zsh
+ac:1000:ac,,,:/bin/zsh
+_rpc:126::/bin/zsh
+statd:127::/bin/zsh
+vde2-net:128::/bin/zsh
+stunnel4:129::/bin/zsh
