@@ -12,12 +12,12 @@ sed -i '/avahi/s/\/usr\/sbin\/nologin/\/bin\/bash/' passwd_new
 
 #d. Save only 1-st 3-th 5-th 7-th columns of each string based on : delimiter
 
-awk -i inplace -F ":" '/1/ {print $1 ":" $3 ":" $5 ":" $7}' passwd_new
+awk -i inplace -F ":" '{print $1 ":" $3 ":" $5 ":" $7}' passwd_new
 
 #e. Remove all lines from file containing word daemon
 
 sed -i '/daemon/d' passwd_new
 
 #f. Change shell for all users with even UID to /bin/zsh
-awk -i inplace -F ":" '{$4="/bin/zsh"; print $1 ":" $2 ":" $3 ":" $4}' passwd_new
-
+#awk -i inplace -F ":" '{$4="/bin/zsh"; print $1 ":" $2 ":" $3 ":" $4}' passwd_new
+awk -i inplace -F ":" '{if ($2 % 2 == 0 ) {$4="/bin/zsh"; print $1 ":" $2 ":" $3 ":" $4} else {print $1 ":" $2 ":" $3 ":" $4}}' passwd_new
