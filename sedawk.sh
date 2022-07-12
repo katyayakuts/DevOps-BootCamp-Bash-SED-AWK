@@ -21,5 +21,3 @@ sed -i '/daemon/d' passwd_new
 #f. Change shell for all users with even UID to /bin/zsh
 #awk -i inplace -F ":" '{$4="/bin/zsh"; print $1 ":" $2 ":" $3 ":" $4}' passwd_new
 awk -i inplace -F ":" '{if ($2 % 2 == 0 ) {$4="/bin/zsh"; print $1 ":" $2 ":" $3 ":" $4} else {print $1 ":" $2 ":" $3 ":" $4}}' passwd_new
-
-cp tests/passwd_result passwd_new
