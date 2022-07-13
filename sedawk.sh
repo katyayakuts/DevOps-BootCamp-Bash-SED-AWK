@@ -8,7 +8,7 @@ awk -i inplace '/saned/ {gsub("/usr/sbin/nologin", "/bin/bash")}1' passwd_new
 
 #c. Change shell for user avahi from /usr/sbin/nologin to /bin/bash using SED
 
-sed -i '/avahi/s/\/usr\/sbin\/nologin/\/bin\/bash/' passwd_new
+sed -i '/avahi:/s/\/usr\/sbin\/nologin/\/bin\/bash/' passwd_new
 
 #d. Save only 1-st 3-th 5-th 7-th columns of each string based on : delimiter
 
